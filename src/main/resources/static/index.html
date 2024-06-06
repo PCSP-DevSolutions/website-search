@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .filter-wrapper {
+            /* display: flex; */
+            /* justify-content: center; */
+            background-color: #011C40;
+            align-items: center;
+            width: 20%;
+            height: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .product-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .filters {
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            padding: 1;
+            margin: 0;
+        }
+        .filter-item {
+            margin: 0 10px;
+        }
+        .filter-item a {
+            text-decoration: none;
+            color: whitesmoke;
+            font-size: 20px;
+        }
+        .product-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            color: #000;
+            padding: 10px;
+            margin: 10px 50px auto 0;
+        }
+        thead {
+            background-color: #E9E9E9;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="filter-wrapper">
+        <ul class="filters">
+            <li id="filter-item-01" class="filter-item"><a href="#All">All</a></li>
+            <!-- Chassis' -->
+            <li id="filter-item-11" class="filter-item"><a href="#Server">Server</a></li>
+            <li id="filter-item-12" class="filter-item"><a href="#Workstation">Workstation</a></li>
+            <li id="filter-item-13" class="filter-item"><a href="#Desktop">Desktop</a></li>
+            <!-- Parts  -->
+            <li id="filter-item-21" class="filter-item"><a href="#CPU">CPU</a></li>
+            <li id="filter-item-22" class="filter-item"><a href="#RAM">RAM</a></li>
+            <li id="filter-item-23" class="filter-item"><a href="#Graphics">Graphics Card</a></li>
+            <li id="filter-item-24" class="filter-item"><a href="#ServerCard">Server Card</a></li>
+            <li id="filter-item-25" class="filter-item"><a href="#Drive">Drive</a></li>
+            <li id="filter-item-26" class="filter-item"><a href="#PSU">PSU</a></li>
+            <li id="filter-item-27" class="filter-item"><a href="#Misc">Misc</a></li>
+        </ul>
+    </div>
+    <div class="product-wrapper">
+        <div class="search-wrapper">
+            <input type="text" id="search" placeholder="Search for products...">
+        </div>
+        <table class="product-table">
+            <thead>
+            <tr>
+                <th>Product Type</th>
+                <th>Brand</th>
+                <th>Model Number</th>
+                <th>Name</th>
+                <th>Condition</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody id="product-table-body">
+            <tr>
+                <td>Chassis</td>
+                <td>Supermicro</td>
+                <td>SC846</td>
+                <td>Supermicro SC846</td>
+                <td>Used</td>
+                <td>1</td>
+                <td>Call for Price</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
